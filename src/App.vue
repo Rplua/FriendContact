@@ -4,7 +4,7 @@
       <h1>My Friends</h1>
     </header>
     <ul>
-      <FriendContact></FriendContact>
+      <FriendContact v-for="friend in friends" :key="friend.id" :name="friend.name" :phone-number="friend.phone" :emailAddress="friend.email"></FriendContact>
     </ul>
   </section>
 </template>
@@ -37,6 +37,7 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 * {
   box-sizing: border-box;
 }
