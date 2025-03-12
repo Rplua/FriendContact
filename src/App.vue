@@ -4,7 +4,7 @@
       <h1>My Friends</h1>
     </header>
     <ul>
-      <FriendContact v-for="friend in friends" :key="friend.id" :name="friend.name" :phone-number="friend.phone" :emailAddress="friend.email"></FriendContact>
+      <FriendContact v-for="friend in friends" :key="friend.id" :name="friend.name" :phone-number="friend.phone" :emailAddress="friend.email" :is-favorite="friend.isFavorite"></FriendContact>
     </ul>
   </section>
 </template>
@@ -23,12 +23,14 @@ export default {
           name: "Manuel Lorenz",
           phone: "0123 45678 90",
           email: "manuel@localhost.com",
+          isFavorite: "1"
         },
         {
           id: "julie",
           name: "Julie Jones",
           phone: "0987 654421 21",
           email: "julie@localhost.com",
+          isFavorite: "0"
         },
       ],
     };
